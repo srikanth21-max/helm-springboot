@@ -1,0 +1,26 @@
+replicaCount: 1
+
+image:
+  repository: srikanth7349/myapp
+  tag: "3"
+  pullPolicy: IfNotPresent
+
+springProfile: dev
+containerPort: 8080
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  className: nginx
+  host: app.local
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 256Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi

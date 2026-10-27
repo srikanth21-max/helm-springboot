@@ -1,0 +1,12 @@
+replicaCount: 2
+springProfile: qa
+resources:
+  requests:
+    cpu: 200m
+    memory: 384Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi
+ingress:
+  enabled: true
+  host: qa.app.local
