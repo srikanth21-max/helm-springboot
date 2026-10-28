@@ -22,8 +22,7 @@ spec:
     namespace: gitops-demo
 
   syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
+    syncPolicy:
+    automated: {}
     syncOptions:
       - CreateNamespace=true
