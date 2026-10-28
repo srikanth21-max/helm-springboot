@@ -10,3 +10,8 @@ resources:
 ingress:
   enabled: true
   host: qa.app.local
+config:
+  APP_GREETING: "Hello from QA"
+  LOGGING_LEVEL_ROOT: "INFO"
+secret:
+  DB_PASSWORD: "qa-password"

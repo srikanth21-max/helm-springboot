@@ -10,3 +10,8 @@ resources:
 ingress:
   enabled: true
   host: app.example.com
+config:
+  APP_GREETING: "Hello from PROD"
+  LOGGING_LEVEL_ROOT: "WARN"
+secret:
+  DB_PASSWORD: "set-at-deploy-time"

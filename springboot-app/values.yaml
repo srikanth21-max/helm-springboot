@@ -16,6 +16,8 @@ ingress:
   enabled: false
   className: nginx
   host: app.local
+  path: /
+  annotations: {}
 
 resources:
   requests:
@@ -24,3 +26,11 @@ resources:
   limits:
     cpu: 500m
     memory: 512Mi
+
+config:
+  APP_GREETING: "Hello from default"
+  LOGGING_LEVEL_ROOT: "INFO"
+
+secret:
+  DB_USERNAME: "appuser"
+  DB_PASSWORD: "changeme"

@@ -60,3 +60,18 @@ Create the name of the service account to use
 {{- default "default" .Values.serviceAccount.name }}
 {{- end }}
 {{- end }}
+
+{{/* Name of the ConfigMap */}}
+{{- define "springboot-app.configMapName" -}}
+{{ include "springboot-app.fullname" . }}-config
+{{- end }}
+
+{{/* Name of the Secret */}}
+{{- define "springboot-app.secretName" -}}
+{{ include "springboot-app.fullname" . }}-secret
+{{- end }}
+
+{{/* Full image reference */}}
+{{- define "springboot-app.image" -}}
+{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}
+{{- end }}

@@ -9,3 +9,8 @@ resources:
     memory: 384Mi
 ingress:
   enabled: false
+config:
+  APP_GREETING: "Hello from DEV"
+  LOGGING_LEVEL_ROOT: "DEBUG"
+secret:
+  DB_PASSWORD: "dev-password"
