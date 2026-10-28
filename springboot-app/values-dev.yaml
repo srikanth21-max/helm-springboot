@@ -11,7 +11,7 @@ ingress:
   enabled: false
   host: dev.app.local
 config:
-  APP_GREETING: "Hello from DEV"
+  APP_GREETING: "Hello from DEV - updated"
   LOGGING_LEVEL_ROOT: "DEBUG"
 secret:
   DB_PASSWORD: "dev-password"
