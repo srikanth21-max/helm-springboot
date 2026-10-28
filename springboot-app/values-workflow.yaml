@@ -1,9 +1,9 @@
-replicaCount: 1
+replicaCount: 2
 springProfile: dev
 image:
   tag: "3"
 config:
-  APP_GREETING: "Hello from workflow v1"
+  APP_GREETING: "Hello from workflow v2"
   LOGGING_LEVEL_ROOT: "INFO"
 ingress:
   enabled: false
