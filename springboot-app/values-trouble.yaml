@@ -1,7 +1,7 @@
 replicaCount: 1
 springProfile: dev
 image:
-  tag: "99-does-not-exist"
+  tag: "3"
 config:
   APP_GREETING: "Hello from trouble demo"
 ingress:
