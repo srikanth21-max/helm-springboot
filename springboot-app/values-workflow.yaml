@@ -1,0 +1,16 @@
+replicaCount: 1
+springProfile: dev
+image:
+  tag: "3"
+config:
+  APP_GREETING: "Hello from workflow v1"
+  LOGGING_LEVEL_ROOT: "INFO"
+ingress:
+  enabled: false
+resources:
+  requests:
+    cpu: 50m
+    memory: 128Mi
+  limits:
+    cpu: 250m
+    memory: 384Mi
