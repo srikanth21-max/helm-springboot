@@ -1,0 +1,17 @@
+replicaCount: 1
+springProfile: dev
+image:
+  repository: srikanth7349/cicd-app
+  tag: "initial"
+  pullPolicy: IfNotPresent
+config:
+  APP_GREETING: "Hello from the CI/CD pipeline"
+ingress:
+  enabled: false
+resources:
+  requests:
+    cpu: 50m
+    memory: 128Mi
+  limits:
+    cpu: 250m
+    memory: 384Mi
