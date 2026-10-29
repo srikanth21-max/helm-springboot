@@ -4,7 +4,7 @@ image:
   tag: "3"
 config:
   APP_ENVIRONMENT: "qa"
-  APP_GREETING: "Hello from QA"
+  APP_GREETING: "Hello from QA - updated"
   LOGGING_LEVEL_ROOT: "INFO"
 secret:
   DB_PASSWORD: "qa-password"
