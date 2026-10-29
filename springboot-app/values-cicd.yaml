@@ -2,7 +2,7 @@ replicaCount: 1
 springProfile: dev
 image:
   repository: srikanth7349/cicd-app
-  tag: "initial"
+  tag: "d2becb1"
   pullPolicy: IfNotPresent
 config:
   APP_GREETING: "Hello from the CI/CD pipeline"
