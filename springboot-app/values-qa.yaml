@@ -1,17 +1,20 @@
 replicaCount: 2
 springProfile: qa
-resources:
-  requests:
-    cpu: 200m
-    memory: 384Mi
-  limits:
-    cpu: 500m
-    memory: 512Mi
-ingress:
-  enabled: true
-  host: qa.app.local
+image:
+  tag: "3"
 config:
+  APP_ENVIRONMENT: "qa"
   APP_GREETING: "Hello from QA"
   LOGGING_LEVEL_ROOT: "INFO"
 secret:
   DB_PASSWORD: "qa-password"
+ingress:
+  enabled: true
+  host: qa.app.local
+resources:
+  requests:
+    cpu: 50m
+    memory: 128Mi
+  limits:
+    cpu: 300m
+    memory: 384Mi

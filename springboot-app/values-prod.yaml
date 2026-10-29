@@ -1,17 +1,20 @@
 replicaCount: 3
 springProfile: prod
-resources:
-  requests:
-    cpu: 500m
-    memory: 512Mi
-  limits:
-    cpu: "1"
-    memory: 1Gi
-ingress:
-  enabled: true
-  host: app.example.com
+image:
+  tag: "3"
 config:
+  APP_ENVIRONMENT: "prod"
   APP_GREETING: "Hello from PROD"
   LOGGING_LEVEL_ROOT: "WARN"
 secret:
-  DB_PASSWORD: "set-at-deploy-time"
+  DB_PASSWORD: "prod-password-placeholder"
+ingress:
+  enabled: true
+  host: app.example.com
+resources:
+  requests:
+    cpu: 50m
+    memory: 128Mi
+  limits:
+    cpu: 500m
+    memory: 512Mi

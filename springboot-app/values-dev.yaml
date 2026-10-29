@@ -1,17 +1,19 @@
-replicaCount: 2
+replicaCount: 1
 springProfile: dev
-resources:
-  requests:
-    cpu: 100m
-    memory: 256Mi
-  limits:
-    cpu: 250m
-    memory: 384Mi
-ingress:
-  enabled: false
-  host: dev.app.local
+image:
+  tag: "3"
 config:
-  APP_GREETING: "Hello from GitOps v2"
+  APP_ENVIRONMENT: "dev"
+  APP_GREETING: "Hello from DEV"
   LOGGING_LEVEL_ROOT: "DEBUG"
 secret:
   DB_PASSWORD: "dev-password"
+ingress:
+  enabled: false
+resources:
+  requests:
+    cpu: 50m
+    memory: 128Mi
+  limits:
+    cpu: 250m
+    memory: 384Mi
