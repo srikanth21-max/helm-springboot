@@ -9,7 +9,7 @@ class Handler(BaseHTTPRequestHandler):
         if self.path == "/actuator/health":
             body = b'{"status":"UP"}'
         else:
-            body = f"Hello from the CI/CD demo, version {VERSION}".encode()
+                        body = f"Hello from the CI/CD demo v2, version {VERSION}".encode()
         self.send_response(200)
         self.send_header("Content-Type", "text/plain")
         self.end_headers()

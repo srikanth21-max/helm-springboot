@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app-cicd
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/srikanth21-max/helm-springboot.git
+    targetRevision: main
+    path: springboot-app
+    helm:
+      valueFiles:
+        - values-cicd.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: cicd-demo
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
