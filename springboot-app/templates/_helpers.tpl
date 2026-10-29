@@ -66,9 +66,13 @@ Create the name of the service account to use
 {{ include "springboot-app.fullname" . }}-config
 {{- end }}
 
-{{/* Name of the Secret */}}
+{{/* Name of the Secret: use an existing one if given, otherwise the chart's own */}}
 {{- define "springboot-app.secretName" -}}
+{{- if .Values.existingSecret -}}
+{{ .Values.existingSecret }}
+{{- else -}}
 {{ include "springboot-app.fullname" . }}-secret
+{{- end -}}
 {{- end }}
 
 {{/* Full image reference */}}

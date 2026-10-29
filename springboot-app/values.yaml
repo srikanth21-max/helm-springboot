@@ -35,3 +35,5 @@ config:
 secret:
   DB_USERNAME: "appuser"
   DB_PASSWORD: "changeme"
+
+existingSecret: ""
