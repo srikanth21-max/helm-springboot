@@ -6,8 +6,6 @@ config:
   APP_ENVIRONMENT: "qa"
   APP_GREETING: "Hello from QA - updated"
   LOGGING_LEVEL_ROOT: "INFO"
-secret:
-  DB_PASSWORD: "qa-password"
 ingress:
   enabled: true
   host: qa.app.local

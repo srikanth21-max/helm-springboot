@@ -6,8 +6,6 @@ config:
   APP_ENVIRONMENT: "prod"
   APP_GREETING: "Hello from PROD"
   LOGGING_LEVEL_ROOT: "WARN"
-secret:
-  DB_PASSWORD: "prod-password-placeholder"
 ingress:
   enabled: true
   host: app.example.com

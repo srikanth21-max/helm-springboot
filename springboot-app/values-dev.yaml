@@ -6,8 +6,7 @@ config:
   APP_ENVIRONMENT: "dev"
   APP_GREETING: "Hello from DEV"
   LOGGING_LEVEL_ROOT: "DEBUG"
-secret:
-  DB_PASSWORD: "dev-password"
+
 ingress:
   enabled: false
 resources:

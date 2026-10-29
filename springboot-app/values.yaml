@@ -32,8 +32,6 @@ config:
   APP_GREETING: "Hello from default"
   LOGGING_LEVEL_ROOT: "INFO"
 
-secret:
-  DB_USERNAME: "appuser"
-  DB_PASSWORD: "changeme"
+secret: {}
 
 existingSecret: ""
